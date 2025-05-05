@@ -13,12 +13,12 @@ function numberLoopCheck() {
   const secondNum = parseInt(document.getElementById("second-num").value)
   let result = 0 
   let count = 0
-  
+
   // setting the while loop 
   while (count < secondNum){
     result += firstNum
     count ++ 
   }
   // Getting the result
-  document.getElementById("result").textContent = firstNum + " " +"X" + secondNum + "=" + result
+  document.getElementById("result").textContent = firstNum + " " +"X"+ " " + secondNum + "=" + result
 }
