@@ -7,28 +7,18 @@
 
 "use strict"
 // Setting the functoin 
-function clauclateTypeOfTriangle() {
+function numberLoopCheck() {
   // Setting the variables
-  const lengthA = parseInt(document.getElementById("length-A").value)
-  const lengthB = parseInt(document.getElementById("length-B").value)
-  const lengthC = parseInt(document.getElementById("length-C").value)
-  let message = ""
-
-  // This code checks for input can form a triangle
-  if ((lengthA + lengthB > lengthC) &&
-    (lengthA + lengthC > lengthB) &&
-    (lengthB + lengthC > lengthA)) {
-    // Setting the if and else statments 
-    if (lengthA == lengthB && lengthB == lengthC) {
-      message = "equilateral triangle"
-    } else if (lengthA == lengthB || lengthA == lengthC || lengthB == lengthC ) {
-      message = "isosceles triangle"
-    }else{
-        message = "Scalene triangle"
-      }
-  } else {
-    message = "Not a triangle "
+  const firstNum = parseInt(document.getElementById("first-num").value)
+  const secondNum = parseInt(document.getElementById("second-num").value)
+  let result = 0 
+  let count = 0
+  
+  // setting the while loop 
+  while (count < secondNum){
+    result += firstNum
+    count ++ 
   }
-
-  document.getElementById("result").innerHTML = message
+  // Getting the result
+  document.getElementById("result").textContent = firstNum + " " +"X" + secondNum + "=" + result
 }
