@@ -11,14 +11,22 @@ function numberLoopCheck() {
   // Setting the variables
   const firstNum = parseInt(document.getElementById("first-num").value)
   const secondNum = parseInt(document.getElementById("second-num").value)
-  let result = 0 
+  let result = 0
   let count = 0
+  let additionText = ""
 
   // setting the while loop 
-  while (count < secondNum){
+  // Repeats the code inside the loop until count reaches secondNum
+  while (count < secondNum) {
     result += firstNum
-    count ++ 
+    additionText += firstNum
+    //If secondNum is 3, we only want to add + when count is 0 
+    if (count < secondNum - 1) {
+      additionText += " + "
+    }
+
+    count++
   }
   // Getting the result
-  document.getElementById("result").textContent = firstNum + " " +"X"+ " " + secondNum + "=" + result
+  document.getElementById("result").textContent = additionText + " = " + result
 }
